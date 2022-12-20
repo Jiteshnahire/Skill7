@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SkillMineProject7.InheritenceAndPolymorphism
 {
-    class ElectronicShowroom
+    /*class ElectronicShowroom
     {
 		static int gst = 12;
 		protected double price;
@@ -85,15 +85,15 @@ namespace SkillMineProject7.InheritenceAndPolymorphism
 	{
 		static void Main(string[] args)
 		{
-			/*Console.WriteLine("Enter price of equipment: ");
+			*//*Console.WriteLine("Enter price of equipment: ");
 			int price = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter name of elcetronic gadget: ");
 			string name = "Oven";
-            Console.WriteLine("Name is: "+name);*/
+            Console.WriteLine("Name is: "+name);*//*
 			ElectronicsEquipments ee = new ElectronicsEquipments(5000000, "Oven");
 			ee.SaleEquipment();
 			Console.WriteLine(ee);
 
 		}
-	}
+	}*/
 }
