@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SkillMineProject7.ConstructorAndMethod
 {
-    class EmployeeAccount
+    public class EmployeeAccount
     {
         protected int empid;
         protected string empname;
