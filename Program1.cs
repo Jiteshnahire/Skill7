@@ -6,30 +6,40 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1._15thdec.Excep
 {
-    class Program
+    class Program1
     {
+        static void Test()
+        {
+            int a = 4, b = 0;
+            if (b == 0)
+            {
+                throw new DivideByZeroException("Could not continue due to zero value");
+            }
+            int c = a / b;
+            Console.WriteLine(c);
+
+        }
         static void Main(string[] args)
         {
 
-            int a = 4, b = 0;
             try
             {
-                int[] arr = new int[5];
-                arr[3] = 100;
-                int c = a / b;
-                Console.WriteLine(c);
+                Test();
             }
-            // Exception base class will handle all type of exception
+
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+
+
             finally
             {
                 Console.WriteLine("End of code");
             }
-            Console.ReadLine();
-
         }
+
+
+
     }
 }
