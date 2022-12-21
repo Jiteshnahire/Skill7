@@ -4,39 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SkillMineProject7.ObjectAndClasses
+namespace ConsoleApp1.DemoQ
 {
     class Student
     {
-        private int roll, m1, m2, m3;
-        private string name;
-        private float total, percentage;
+		int id, marks;
+		String name;
 
-        public Student(int roll, string name, int m1, int m2, int m3)
-        {
-            this.roll = roll;
-            this.m1 = m1;
-            this.m2 = m2;
-            this.m3 = m3;
-            this.name = name;
+		public Student() { }
 
-            /*this.percentage = percentage;*/
-        }
-        public void ObtainedMarks()
-        {
-            total = (m1 + m2 + m3);
-            percentage = (total) / 3;
-        }
+		public Student(int id, int marks, String name)
+		{
+			
+			this.id = id;
+			this.marks = marks;
+			this.name = name;
+		}
+
         public override string ToString()
         {
-            return $"Student id  {roll}, Student name {name},Total marks{total} & Percentage of Student {percentage}";
+            return $"";
         }
-        static void Main(string[] args)
-        {
-            Student s = new Student(121, "Vinaya", 50, 80, 65);
-            s.ObtainedMarks();
-            Console.WriteLine(s);
-            Console.ReadLine();
-        }
-    }
+
+        public int CompareTo(Student o)
+		{
+			if (this.name.CompareTo(o.name) == 0)
+				return 0;
+			else if (this.name.CompareTo(o.name) < 0)
+				return 1;
+			else
+				return -1;
+		}
+
+	}
 }

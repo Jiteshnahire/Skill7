@@ -1,28 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SkillMineProject7.ConstructorAndMethod
+namespace ConsoleApp1.DemoQ
 {
     class Access
     {
         static void Main(string[] args)
         {
-            EmployeeAccount ac = new EmployeeAccount(121, "XYZ", 550000);
-            ac.CalculateSalary();
-            Console.WriteLine(ac);
-            Manager mg = new Manager(250, "ABC", 2525555.36, 1500);
-            mg.CalculateSalary();
-            Console.WriteLine(mg);
-            SalesManager sm = new SalesManager(240, "FREe", 50000, 80000, 65, 85);
-
-            sm.CalculateSalary();
-            Console.WriteLine(sm);
-
-
+            Queue q = new Queue();
+            Queue[] aq = new Queue[]
+            {
+              new Queue()
+              {
+                  
+              }
+              
+            };
+            q.Enqueue(25);
+            q.Enqueue(10);
+            q.Enqueue(20);
+            q.Enqueue(30);
+            
             Console.ReadLine();
+
+            q.Dequeue();
+            Console.WriteLine("first element in queue " + q.Peek());
+
+            foreach (var item in q)
+            {
+                Console.WriteLine(item);
+            }
+
 
         }
     }

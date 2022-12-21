@@ -4,32 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SkillMineProject7.ConstructorAndMethod
+namespace ConsoleApp1.DemoA.NewFolder1
 {
-    class Employe
+    public partial class Employe
     {
-        private int empid;
-        private string empname;
-        private float empbalance;
-        private static int count;
+        public int empId;
+        public string nameEmp;
 
-
-        public Employe(int empid, string empname, float empbalance, int count, string empstatus = "excellent employe")
+        public Employe(int id,string name)
         {
-            count++;
-            empid = count;
-            this.empname = empname;
-            this.empbalance = empbalance;
+            this.empId = id;
+            this.nameEmp = name;
 
         }
-        public static int GetCount()
+        public void DisplayEmpInfo()
         {
-            return count;
+            Console.WriteLine(this.empId+" "+this.nameEmp);
         }
 
         public override string ToString()
         {
-            return $"{empname}-->{empid}-->{empbalance}--->{count}";
+            return $"";
         }
-    }
+        static void Main(string[] args)
+        {
+            Employe emp = new Employe(25, "CDS");
+            Console.WriteLine(emp.empId);
+            Console.WriteLine(emp.nameEmp);
+            Console.ReadLine();
+
+        }
+    }   
 }
